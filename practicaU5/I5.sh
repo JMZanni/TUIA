@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#Crear un script que permita recibir tres argumentos: una palabra P, un número positivo n
+#y una ruta. Se debe validar la cantidad de argumentos, que n cumpla los requerimientos y
+#se tenga permiso de escritura en la ruta indicada.
+
 P=$1
 N=$2
 RUTA=$3
@@ -10,6 +14,7 @@ RUTA=$3
 [ $2 -le 0 ] && echo "Ha ingresado un número n menor que 0" && exit 2
 [ ! -d $RUTA ] && echo "No existe la ruta ingresada" && exit 3
 [ ! -w $RUTA ] && echo "No tiene permiso de escritura en la ruta ingresada" && exit 3
+
 
 #Establezco la ruta y nombre del archivo a crear
 
